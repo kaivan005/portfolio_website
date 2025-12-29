@@ -2,7 +2,7 @@ import React from 'react';
 import SkillCards from '../cards/skillCards';
 function Skills(){
     return (
-        <div>
+        <div className="content">
             <h2>Skills</h2>
             <SkillCards img='path/to/image' skillName='Programming Languages' skills={['Python', 'JavaScript', 'Java','C++']} />
             <SkillCards img='path/to/image' skillName='Web Technologies' skills={['HTML', 'CSS', 'React', 'Tailwind','Node.js']} />

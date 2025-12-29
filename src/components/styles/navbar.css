@@ -9,16 +9,26 @@
 
 .navbar-top {
     width: 100%;
-    padding: 0 16px;
-    background-color: rgba(25, 118, 210,0.8); /* MUI primary color */
-    color: #fff;
+    z-index: 50;
+    background-color: rgba(2, 6, 23, 0.7) !important;
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.nav-items {
+    /* text-transform: capitalize; */
 }
 
 .navName{
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #fff;
+    width: max-content;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-weight: bold !important;
+    letter-spacing: -0.010em !important;
+    font-size: 1.5rem !important;
+    background: linear-gradient(90deg, #60a5fa 10%, #c084fc 20%,  #60a5fa 35%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-align: left;
 }
 

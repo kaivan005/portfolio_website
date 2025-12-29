@@ -38,8 +38,24 @@ function Navbar(props){
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 2 }}>
                         {navLinks.map((link) => (
-                            <Button key={link} color="inherit" onClick={() => scrollToSection(link)}>
-                                {link.charAt(0) + link.slice(1)}
+                            <Button 
+                            key={link} 
+                            className='nav-items' 
+                            color="inherit"
+                            sx={{    
+                                margin: "0 6px",
+                                fontWeight: "bold",
+                                textTransform: "none ",
+                                fontSize: "0.875rem ",
+                                border: "none",
+                                background: "transparent",
+                                color: "#cbd5e1",
+                                cursor: "pointer",
+                                borderRadius: "0.5rem",
+                                transition: "all 300ms",
+                            }} 
+                            onClick={() => scrollToSection(link)}>
+                                {link.charAt(0).toUpperCase() + link.slice(1)}
                             </Button>
                         ))}
            

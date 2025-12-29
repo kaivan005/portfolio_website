@@ -3,7 +3,7 @@ import ContactCard from '../cards/contactCard.jsx';
 
 function Contact()  {
     return (
-        <div>
+        <div  className="content">
             <h2>Let's Connect</h2>
             <p>I'm always open to discussing new opportunities, collaboration, or just chatting about tech!</p>
             <ContactCard img='path/to/email_icon' method='Email' info='kaivan@example.com' />

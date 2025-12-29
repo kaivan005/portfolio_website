@@ -3,7 +3,7 @@ import CerificationCard from '../cards/cerificationCard';
 
 function Certification(){   
     return(
-        <div>
+        <div className="content">
             <h2>Certifications & Courses</h2>
             <CerificationCard img='path/to/image' courseName='Responsive Web Design' provider='freeCodeCamp' status='Completed' />
             <CerificationCard img='path/to/image' courseName='JavaScript Algorithms' provider='freeCodeCamp' status='Completed' />
