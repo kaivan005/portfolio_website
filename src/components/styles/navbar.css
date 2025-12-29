@@ -1,0 +1,63 @@
+
+.container {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.navbar-top {
+    width: 100%;
+    padding: 0 16px;
+    background-color: rgba(25, 118, 210,0.8); /* MUI primary color */
+    color: #fff;
+}
+
+.navName{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: left;
+}
+
+.menu-button {
+    margin-right: 16px; /* Adjust as needed */
+    display: none; /* Default to none */
+}
+
+.logo {
+    flex-grow: 1;
+    display: block; /* Default to block */
+}
+
+.desktop-nav {
+    display: block; /* Default to block */
+}
+
+.nav-button {
+    color: #fff;
+}
+
+.drawer {
+    display: block; /* Default to block */
+}
+
+@media (min-width: 600px) {
+    .menu-button {
+        display: none; /* Hide on small screens */
+    }
+
+    .logo {
+        display: block; /* Show on small screens */
+    }
+
+    .desktop-nav {
+        display: block; /* Show on small screens */
+    }
+
+    .drawer {
+        display: none; /* Hide on small screens */
+    }
+}
