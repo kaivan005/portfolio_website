@@ -1,0 +1,107 @@
+
+.project-card {
+  position: relative;
+}
+
+.project-card-glow {
+  position: absolute;
+  inset: -0.25rem;
+  background: linear-gradient(to right, #3b82f6, #a855f7, #ec4899);
+  border-radius: 1.5rem;
+  filter: blur(24px);
+  opacity: 0.2;
+  transition: opacity 500ms;
+}
+
+.project-card:hover .project-card-glow {
+  opacity: 0.3;
+}
+
+.project-card-content {
+  position: relative;
+  padding: 2.5rem;
+  background-color: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 1.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.project-background-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: 
+    linear-gradient(45deg, transparent 48%, rgb(59, 130, 246) 49%, rgb(59, 130, 246) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgb(168, 85, 247) 49%, rgb(168, 85, 247) 51%, transparent 52%);
+  background-size: 20px 20px;
+}
+
+.project-content {
+  position: relative;
+  z-index: 10;
+}
+
+.project-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.project-icon-container {
+  position: relative;
+}
+
+.project-icon-glow {
+  position: absolute;
+  inset: -0.5rem;
+  background: linear-gradient(to right, #3b82f6, #a855f7);
+  border-radius: 50%;
+  filter: blur(16px);
+  opacity: 0.5;
+}
+
+.project-icon {
+  position: relative;
+  padding: 1.25rem;
+  background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2));
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 1rem;
+}
+
+.project-title {
+  font-size: 1.875rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.project-description {
+  color: #cbd5e1;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project-tag {
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.8), #0f172a);
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 300ms;
+  cursor: default;
+}
+
+.project-tag:hover {
+  transform: scale(1.05) translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.5);
+}

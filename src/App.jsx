@@ -20,7 +20,6 @@ function App() {
       <Skills />
       <Certification />
       <Project />
-      <Certification />
       <Contact />
       <Footer name={name}/>
     </>

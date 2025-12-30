@@ -1,14 +1,28 @@
 import React from 'react';
 import SkillCards from '../cards/skillCards';
-function Skills(){
+import TerminalOutlinedIcon from '@mui/icons-material/TerminalOutlined';
+import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
+import LayersOutlinedIcon from '@mui/icons-material/LayersOutlined';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import '../styles/skill.css';
+
+function Skills() {
     return (
-        <div className="content">
-            <h2>Skills</h2>
-            <SkillCards img='path/to/image' skillName='Programming Languages' skills={['Python', 'JavaScript', 'Java','C++']} />
-            <SkillCards img='path/to/image' skillName='Web Technologies' skills={['HTML', 'CSS', 'React', 'Tailwind','Node.js']} />
-            <SkillCards img='path/to/image' skillName='Tools & Platforms' skills={['Git', 'GitHub', 'Figma', 'Linux']} />
-            <SkillCards img='path/to/image' skillName='Currently Learning' skills={['TypeScript', 'PostgreSQL', 'Docker','System Design']} />
-        </div>
-    )
+        <section className="section with-bg" id="skills">
+            <div className="section-container">
+                <header className="section-header">
+                    <h1 className="section-title">Skills</h1>
+                    <div className="section-underline"></div>
+                    <div className="skills-grid"> {/* Added grid for layout */}
+                        <SkillCards icon={<TerminalOutlinedIcon />} skillName='Programming Languages' skills={['Python', 'JavaScript', 'Java', 'C++']} iconClass="blue" />
+                        <SkillCards icon={<LanguageOutlinedIcon />} skillName='Web Technologies' skills={['HTML', 'CSS', 'React', 'Tailwind', 'Node.js']} iconClass="purple" />
+                        <SkillCards icon={<LayersOutlinedIcon />} skillName='Tools & Platforms' skills={['Git', 'GitHub', 'Figma', 'Linux']} iconClass="cyan" />
+                        <SkillCards icon={<AutoAwesomeIcon />} skillName='Currently Learning' skills={['TypeScript', 'PostgreSQL', 'Docker', 'System Design']} iconClass="pink" />
+                    </div>
+                </header>
+            </div>
+        </section>
+    );
 }
+
 export default Skills;

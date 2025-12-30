@@ -1,0 +1,140 @@
+.cert-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 640px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cert-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cert-card {
+  position: relative;
+  /* height: 100%; */
+  transition: transform 300ms;
+  
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+}
+
+.cert-card-glow {
+  position: absolute;
+  inset: -0.125rem;
+  border-radius: 1rem;
+  filter: blur(4px);
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.cert-card-glow.green {
+  background: linear-gradient(to right, #22c55e, #10b981);
+}
+
+.cert-card-glow.yellow {
+  background: linear-gradient(to right, #eab308, #f97316);
+}
+
+.cert-card:hover .cert-card-glow {
+  opacity: 0.2;
+}
+
+.cert-card-content {
+  position: relative;
+  padding: 1.5rem;
+  background-color: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: border-color 300ms;
+}
+
+.cert-card:hover .cert-card-content {
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.cert-icon {
+  padding: 1rem;
+  background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1));
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 0.75rem;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.cert-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.cert-platform {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cert-footer {
+  margin-top: auto;
+}
+
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.cert-badge.completed {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #4ade80;
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.cert-badge.in-progress {
+  background-color: rgba(234, 179, 8, 0.1);
+  color: #facc15;
+  border-color: rgba(234, 179, 8, 0.3);
+}
+
+.cert-badge-icon {
+  animation: pulse-icon 2s infinite;
+}
+
+@keyframes pulse-icon {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@media (max-width: 640px) {
+  .cert-card-content {
+    padding: 1.25rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cert-platform {
+    justify-content: center;
+  }
+}

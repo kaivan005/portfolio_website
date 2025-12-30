@@ -3,14 +3,17 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-    color: #090f21;
+  color: #090f21;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 /* Terminal box */
 .terminal {
-    padding: 25px;
-  width: 800px;
-  max-width: 90%;
+  padding: 14px 24px;
+  width: 100%;
+  max-width: 820px;
   text-align: left;
   font-family: 'Courier New', Courier, monospace !important;
   background-color: #090f20;
@@ -57,7 +60,7 @@
 
 /* Body */
 .terminal-body {
-  padding: 4px;
+  padding: 6px 2px 10px;
   font-size: 15px;
   line-height: 1.7;
 }
@@ -101,5 +104,25 @@
   25%,
   75% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .terminal {
+    padding: 12px 16px;
+  }
+
+  .terminal-body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .dots {
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
   }
 }

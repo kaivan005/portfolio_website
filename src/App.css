@@ -5,6 +5,16 @@ html{
   background-color: #020617;
   color: #f1f5f9;
 }
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .content{
     position: relative; 
     min-height: clamp(500px, 90vh, 900px);
@@ -13,9 +23,66 @@ html{
     align-items: center;
     justify-content: space-around;
     padding: 1rem;
-    padding-top: 4rem;
+    background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.5), transparent);
 
 }
+
+.section {
+  position: relative;
+  padding: 8rem 1rem;
+}
+
+.section.with-bg {
+  background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.5), transparent);
+}
+
+.section-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.5), transparent);
+}
+
+.section-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-container.medium {
+  max-width: 64rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.section-title-gradient {
+  background: linear-gradient(to right, #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-underline {
+  width: 6rem;
+  height: 0.25rem;
+  background: linear-gradient(to right, #3b82f6, #a855f7);
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+.section-description {
+  color: #94a3b8;
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -24,7 +91,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 #root {
-  max-width: 1280px;
+width: 100%;  
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;

@@ -1,15 +1,21 @@
 import React from 'react';
+import '../styles/skill.css';
 
-function SkillCards(props){
+function SkillCards(props) {
     let nestedSkills = props.skills.map((skill, index) => (
-        <div key={index} className='nestedSkillCard'>{skill}</div>
+        <div key={index} className='skill-tag'>{skill}</div>
     ));
     return (
         <div className="skill-card">
-            <img src={props.img} alt={props.skillName} />
-            <h3>{props.skillName}</h3>
-            <div className='nestedSkillCards'>{nestedSkills}</div>
+            <div className={`skill-card-glow ${props.iconClass}`}></div>
+            <div className="skill-card-content">
+                <div className="skill-card-header">
+                    <div className={`skill-icon ${props.iconClass}`}>{props.icon}</div>
+                    <h3 className="skill-card-title">{props.skillName}</h3>
+                </div>
+                <div className='skill-tags'>{nestedSkills}</div>
+            </div>
         </div>
-    )
+    );
 }   
 export default SkillCards;
