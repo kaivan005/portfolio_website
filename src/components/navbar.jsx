@@ -5,23 +5,27 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 
 function Navbar(props){
-    const [mobileMenuAnchor, setMobileMenuAnchor] = React.useState(null);
+    const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
     const [activeSection, setActiveSection] = React.useState('home');
     const indicatorRef = React.useRef(null);
     const buttonsRef = React.useRef({});
 
-    const handleMenu = (event) => {
-        setMobileMenuAnchor(event.currentTarget);
+    const handleMenu = () => {
+        setMobileMenuOpen(true);
     };
 
     const handleClose = () => {
-        setMobileMenuAnchor(null);
+        setMobileMenuOpen(false);
     };
 
     const scrollToSection = (sectionId) => {
@@ -120,18 +124,69 @@ function Navbar(props){
                         ))}
            
                     </Box>
-                    <IconButton sx={{ display: { xs: 'flex', sm: 'none' } }} color="inherit" onClick={handleMenu}>
-                        <MenuIcon />
+                    <IconButton 
+                        sx={{ 
+                            display: { xs: 'flex', sm: 'none' },
+                            position: 'relative',
+                            zIndex: 1300,
+                        }} 
+                        color="inherit" 
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                        {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
                     </IconButton>
-                    <Menu anchorEl={mobileMenuAnchor} open={Boolean(mobileMenuAnchor)} onClose={handleClose}>
-                        {navLinks.map((link) => (
-                            <MenuItem key={link} onClick={() => scrollToSection(link)}>
-                                {link.charAt(0).toUpperCase() + link.slice(1)}
-                            </MenuItem>
-                        ))}
-                    </Menu>
                 </Toolbar>
             </AppBar>
+            <Drawer
+                anchor="top"
+                open={mobileMenuOpen}
+                onClose={handleClose}
+                hideBackdrop
+                sx={{
+                    display: { xs: 'block', sm: 'none' },
+                    '& .MuiDrawer-paper': {
+                        width: '100%',
+                        backgroundColor: 'rgba(2, 6, 23, 0.98)',
+                        backdropFilter: 'blur(24px)',
+                        borderBottom: '1px solid rgba(51, 65, 85, 0.5)',
+                        marginTop: '64px',
+                        boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3)',
+                    },
+                }}
+            >
+                <Box sx={{ width: '100%', padding: '1rem 0' }} role="presentation">
+                    <List>
+                        {navLinks.map((link) => (
+                            <ListItem key={link} disablePadding>
+                                <ListItemButton 
+                                    onClick={() => scrollToSection(link)}
+                                    className={activeSection === link ? 'mobile-nav-active' : ''}
+                                    sx={{
+                                        padding: '1rem 1.5rem',
+                                        borderLeft: activeSection === link ? '4px solid #60a5fa' : '4px solid transparent',
+                                        backgroundColor: activeSection === link ? 'rgba(96, 165, 250, 0.1)' : 'transparent',
+                                        transition: 'all 300ms',
+                                        '&:hover': {
+                                            backgroundColor: 'rgba(96, 165, 250, 0.15)',
+                                        },
+                                    }}
+                                >
+                                    <ListItemText 
+                                        primary={link.charAt(0).toUpperCase() + link.slice(1)} 
+                                        sx={{
+                                            '& .MuiListItemText-primary': {
+                                                color: activeSection === link ? '#60a5fa' : '#cbd5e1',
+                                                fontWeight: activeSection === link ? '600' : '500',
+                                                fontSize: '1.125rem',
+                                            },
+                                        }}
+                                    />
+                                </ListItemButton>
+                            </ListItem>
+                        ))}
+                    </List>
+                </Box>
+            </Drawer>
         </>
     )
 }
