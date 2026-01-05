@@ -51,7 +51,7 @@ function Footer(props) {
                     <div className="footer-text">
                         <p className="footer-copyright">© 2024 <span className="footer-name">Developed by Kaivan Koshti</span>.</p>
                         <p className="footer-tech">Built with <span className="footer-heart">♥</span> using React, Tailwind CSS & Motion</p>
-                        <p className="footer-hosting">Deployed on </p>
+                        <p className="footer-hosting">Deployed on Github Pages</p>
                     </div>
                     <div className="footer-social">
 
@@ -80,5 +80,6 @@ function Footer(props) {
         </footer>
     );
 }
+
 
 export default Footer;
