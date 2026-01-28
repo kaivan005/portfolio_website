@@ -8,14 +8,16 @@ function Project() {
         <section className="section with-bg" id="projects">
             <div className="section-container">
                 <header className="section-header">
-                    <h1 className="section-title">Projects In <span className='section-title-gradient'>Progress</span></h1>
+                    <h1 className="section-title">Projects</h1>
                     <div className="section-underline"></div>
                     <p>Details about projects will be added soon.</p>
                     <ProjectCard
                         icon={<RocketLaunchOutlinedIcon fontSize="large" />}
-                        projectName='Building & Learning'
-                        description="I'm actively working on personal projects to practice web development, algorithms, and problem-solving. As I complete projects worth showcasing, I'll add them here with live demos and source code."
-                        tags={['React', 'UI/UX', 'Algorithms']}
+                        projectName='LoanIQ – Loan Eligibility Predictor'
+                        description="A machine learning project that predicts loan eligibility based on applicant data. Built using Python and scikit-learn, this model helps financial institutions assess loan applications efficiently by analyzing factors like income, credit history, and employment status."
+                        tags={['Python', 'Streamlit', 'Machine Learning']}
+                        code='https://github.com/kaivan005/loan-eligibility.git'
+                        demo='https://loan-iq.streamlit.app/'
                     />
                 </header>
             </div>
