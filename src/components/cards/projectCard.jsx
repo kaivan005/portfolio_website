@@ -10,12 +10,12 @@ function ProjectCard(props) {
 
   return (
     <div className="project-card">
-      <div className="project-card-glow"></div>
+      {/* <div className="project-card-glow"></div> */}
 
       <div className="project-card-content">
 
         <div className="project-content">
-          <div className="project-icon-wrapper">
+          {/* <div className="project-icon-wrapper"> */}
             <div className="project-icon-container">
              
             </div>
@@ -62,7 +62,7 @@ function ProjectCard(props) {
           )}
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
 

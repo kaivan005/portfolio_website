@@ -10,7 +10,6 @@ function Project() {
                 <header className="section-header">
                     <h1 className="section-title">Projects</h1>
                     <div className="section-underline"></div>
-                    <p>Details about projects will be added soon.</p>
                     <ProjectCard
                         icon={<RocketLaunchOutlinedIcon fontSize="large" />}
                         projectName='LoanIQ – Loan Eligibility Predictor'
