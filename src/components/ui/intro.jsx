@@ -43,13 +43,6 @@ function Intro(props) {
 };
 
 
-    const activeBtnSx = {
-        backgroundColor: "rgba(96,165,250,0.18)",
-        borderColor: "rgba(96,165,250,0.6)",
-        color: "#ffffff",
-        boxShadow: "0 0 18px rgba(96,165,250,0.35)",
-    };
-
     return (
       <div className='content intro-section' id="home">
             <div className="intro-header"><RiGraduationCapLine /> IT Student & Aspiring Developer <PiStarFourFill /></div>

@@ -5,7 +5,7 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import { Box, IconButton } from '@mui/material';
 import './styles/footer.css';
 
-function Footer(props) {
+function Footer() {
     const iconBtnSx = {
         width: 52,
         height: 52,
@@ -36,13 +36,7 @@ function Footer(props) {
     };
 
 
-    const activeBtnSx = {
-        backgroundColor: "rgba(96,165,250,0.18)",
-        borderColor: "rgba(96,165,250,0.6)",
-        color: "#ffffff",
-        boxShadow: "0 0 18px rgba(96,165,250,0.35)",
-    };
-
+   
 
     return (
         <footer className="footer">

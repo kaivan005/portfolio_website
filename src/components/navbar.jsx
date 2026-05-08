@@ -20,9 +20,6 @@ function Navbar(props){
     const indicatorRef = React.useRef(null);
     const buttonsRef = React.useRef({});
 
-    const handleMenu = () => {
-        setMobileMenuOpen(true);
-    };
 
     const handleClose = () => {
         setMobileMenuOpen(false);

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Navbar from './components/navbar'
 import Intro from './components/ui/intro'
 import About from './components/ui/about'
@@ -8,9 +7,9 @@ import Project from './components/ui/project'
 import Contact from './components/ui/contact'
 import Footer from './components/footer'
 import './App.css'
+import React from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
   let name = "Kaivan Koshti";
   return (
     <>
