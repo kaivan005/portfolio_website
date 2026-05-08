@@ -32,7 +32,7 @@ function Project() {
                             'DevOps'
                         ]}
                         Label1="Pipeline" 
-                        code='https://github.com/kaivan005/portfolio_website/actions/workflows/pages/pages-build-deployment'
+                        code='https://github.com/kaivan005/portfolio_website/actions/workflows/deploy.yml'
                         demo='https://kaivan005.github.io/portfolio_website/'
                     />
                 </header>
