@@ -45,7 +45,7 @@ function ProjectCard(props) {
                   rel="noopener noreferrer"
                   className="project-button"
                 >
-                  View Code
+                  {props.Label1 || 'View Code'}
                 </a>
               )}
               {props.demo && (
@@ -55,7 +55,7 @@ function ProjectCard(props) {
                   rel="noopener noreferrer"
                   className="project-button primary"
                 >
-                  Live Demo
+                  {props.Label2 || 'Live Demo'}
                 </a>
               )}
             </div>
